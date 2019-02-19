@@ -1,32 +1,30 @@
 private double fractionLength = .8; 
 private int smallestBranch = 10; 
 private double branchAngle = .2;  
-int[][] colors = new int[3][3];
-int colorIndex = 0;
-int timer = 0;
+PFont temp;
 public void setup() 
 {   
-  size(640,480);    
-  //noLoop(); 
-  colors[0] = new int[]{175,140,0};
-  colors[1] = new int[]{130,40,20};
-  colors[2] = new int[]{78,200,1};
+  size(640,800);    
+  noLoop();
+  temp = loadFont("DejaVuMathTeXGyre-Regular-48.vlw");
 } 
 public void draw() 
 {   
-  if (timer == 10) {
-  background(0);   
-  colorIndex++;
-  if (colorIndex == 3)
-    colorIndex = 0;
-  stroke(colors[colorIndex][0],colors[colorIndex][1],colors[colorIndex][2]);
-  line(320,480,320,380);   
-  drawBranches(320,380,120,3*Math.PI/2);  
-  timer = 0;
-  }
-  else {
-    timer++;
-  }
+  background(0);
+  stroke(180,140,20);
+  line(80,50,560,50);
+  line(80,750,560,750);
+  textSize(100);
+  fill(180,140,20);
+  textFont(temp);
+  text('A',140,140);
+  text('V',460,680);
+  rect(469,657,15,1);
+  stroke(140);
+  line(80,50,80,750);
+  line(560,50,560,750);
+  line(320,480,320,580);   
+  drawBranches(320,480,120,3*Math.PI/2);  
 } 
 public void drawBranches(int x,int y, double branchLength, double angle) 
 {   
@@ -45,7 +43,9 @@ public void drawBranches(int x,int y, double branchLength, double angle)
   line(x,y,endX2,endY2);
   if (branchLength > smallestBranch) {
     drawBranches(endX1,endY1,branchLength-5,angle-30);
+    stroke(180,140,20);
     drawBranches(endX2,endY2,branchLength-5,angle+30);
+    stroke(140);
     drawBranches(endX3,endY3,branchLength-7,angle);
   }
 } 
