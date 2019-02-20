@@ -6,7 +6,7 @@ public void setup()
 {   
   size(640,800);    
   noLoop();
-  temp = loadFont("DejaVuMathTeXGyre-Regular-48.vlw");
+  temp = loadFont("data/DejaVuMathTeXGyre-Regular-48.vlw");
 } 
 public void draw() 
 {   
