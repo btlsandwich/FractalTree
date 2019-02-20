@@ -14,7 +14,7 @@ public void draw()
   stroke(180,140,20);
   fill(0);
   rect(80,50,480,700,20);
-  textSize(100);
+  textSize(70);
   fill(180,140,20);
   //textFont(temp);
   text('A',115,115);
