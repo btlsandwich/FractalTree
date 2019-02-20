@@ -1,12 +1,12 @@
 private double fractionLength = .8; 
 private int smallestBranch = 10; 
 private double branchAngle = .2;  
-PFont temp;
+//PFont temp;
 public void setup() 
 {   
   size(640,800);    
   noLoop();
-  temp = loadFont("data/DejaVuMathTeXGyre-Regular-48.vlw");
+  //temp = loadFont("data/DejaVuMathTeXGyre-Regular-48.vlw");
 } 
 public void draw() 
 {   
@@ -16,7 +16,7 @@ public void draw()
   rect(80,50,480,700,20);
   textSize(100);
   fill(180,140,20);
-  textFont(temp);
+  //textFont(temp);
   text('A',115,115);
   text('V',495,715);
   rect(504,692,15,1);
